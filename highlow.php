@@ -1,8 +1,14 @@
 <?php
-    echo "We gunna play a game now, you see?\nYou going to guess a number 'tween 1 and-uh hundred\n";
+    if ($argc < 3) {
+        die("You shall not pass!!..now die\n");
+    } elseif ( !is_numeric($argv[1]) || !is_numeric($argv[2]) ) {
+        die("You don't do the numberic dance, do you?\n");
+    }
+
+    echo "We gunna play a game now, you see?\nYou going to guess a number 'tween {$argv[1]} and {argv[2]}\n";
     echo 'I\'m going to give you clues if ya don\'ts guess right. You & I\'s we\'re guuna have some fun' . "\n";
 
-    $random = mt_rand ( 1 , 100 );
+    $random = mt_rand ( $argv[1] , $argv[2] );
     echo "$random\n";
 
     do {
