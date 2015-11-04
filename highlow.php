@@ -5,7 +5,7 @@
         die("You don't do the numberic dance, do you?\n");
     }
 
-    echo "We gunna play a game now, you see?\nYou going to guess a number 'tween {$argv[1]} and {argv[2]}\n";
+    echo "We gunna play a game now, you see?\nYou going to guess a number 'tween {$argv[1]} and {$argv[2]}\n";
     echo 'I\'m going to give you clues if ya don\'ts guess right. You & I\'s we\'re guuna have some fun' . "\n";
 
     $random = mt_rand ( $argv[1] , $argv[2] );
